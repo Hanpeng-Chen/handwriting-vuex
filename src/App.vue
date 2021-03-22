@@ -8,6 +8,13 @@
       <button @click="$store.commit('addCount', 10)">加10</button>
       <button @click="$store.dispatch('addCount', 10)">异步加10</button>
     </ul>
+    <ul>
+      <p>moduleA</p>
+      <li>moduleA数量：{{$store.state.moduleA.count}}</li>
+      <li>count：{{$store.getters['moduleA/count']}}</li>
+      <button @click="$store.commit('moduleA/addCount', 10)">moduleA加10</button>
+      <button @click="$store.dispatch('moduleA/addCount', 10)">moduleA异步加10</button>
+    </ul>
   </div>
 </template>
 
